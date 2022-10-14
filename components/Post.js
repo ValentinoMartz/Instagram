@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import dots from "../assets/dots.png";
+import comment from "../assets/comment.png";
+import message from "../assets/message.png";
+import save from "../assets/save.png";
+import hearth from "../assets/hearth.png";
 
 const Post = ({ username, profilePic, postPhoto, caption }) => {
   return (
@@ -25,10 +29,39 @@ const Post = ({ username, profilePic, postPhoto, caption }) => {
         <div className="">
           <img src={postPhoto.src} alt="" />
         </div>
-        {/* Bottons */}
-        {/* Caption */}
-        {/* Comments */}
-        {/* Input */}
+        <div className="m-3">
+          {/* Bottons */}
+          <div className="">
+            <div className="flex justify-between">
+              <div className="flex space-x-4">
+                <div className="Btn">
+                  <Image src={hearth} />
+                </div>
+                <div className="Btn">
+                  <Image src={comment} />
+                </div>
+                <div className="Btn">
+                  <Image src={message} />
+                </div>
+              </div>
+
+              <div className="Btn">
+                <Image src={save} />
+              </div>
+            </div>
+
+            <div className="mt-2 customfont">
+              <p>72,117 likes</p>
+            </div>
+          </div>
+          {/* Caption */}
+          <div className="flex items-center mt-2">
+            <p className="customfont mr-2 whitespace-nowrap">{username}</p>
+            <p className="truncate">{caption}</p>
+          </div>
+          {/* Comments */}
+          {/* Input */}
+        </div>
       </div>
     </div>
   );
