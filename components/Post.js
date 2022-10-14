@@ -22,7 +22,9 @@ const Post = ({ username, profilePic, postPhoto, caption }) => {
           </div>
         </div>
         {/* Photo */}
-
+        <div className="">
+          <img src={postPhoto.src} alt="" />
+        </div>
         {/* Bottons */}
         {/* Caption */}
         {/* Comments */}
