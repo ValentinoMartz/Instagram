@@ -1,4 +1,5 @@
 import React from "react";
+import MiniProfile from "./MiniProfile";
 import Posts from "./Posts";
 import Stories from "./Stories";
 
@@ -13,6 +14,7 @@ const Feed = () => {
       </section>
       <section className="max-w-[320px] w-full mx-8 hidden lg:block">
         {/* MiniProfile */}
+        <MiniProfile />
         {/* Suggestion */}
       </section>
     </div>
