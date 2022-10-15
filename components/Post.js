@@ -5,8 +5,19 @@ import comment from "../assets/comment.png";
 import message from "../assets/message.png";
 import save from "../assets/save.png";
 import hearth from "../assets/hearth.png";
+import emojy from "../assets/emojy.png";
 
 const Post = ({ username, profilePic, postPhoto, caption }) => {
+  const comments = [
+    {
+      username: "Jon Doe",
+      comment: "Hello from the comment section",
+    },
+    {
+      username: "Mike Doe",
+      comment: "Second Hello from the comment section",
+    },
+  ];
   return (
     <div>
       <div className="border rounded-lg my-3">
@@ -59,8 +70,44 @@ const Post = ({ username, profilePic, postPhoto, caption }) => {
             <p className="customfont mr-2 whitespace-nowrap">{username}</p>
             <p className="truncate">{caption}</p>
           </div>
+          {/* View all comments */}
+          <p className="text-sm text-gray-500 mt-1 my-2">
+            View all 117 comments
+          </p>
+
           {/* Comments */}
+          <div className="">
+            {comments.map((comment) => (
+              <div className="max-w-24 overflow-y-auto flex justify-between">
+                <div className="flex items-center truncate">
+                  <p className="customfont mr-2">{comment.username}</p>
+                  <p className="truncate mr-2">{comment.comment}</p>
+                </div>
+                <div className="h-3 w-3 shrink-0">
+                  <Image src={hearth} />
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* TimeStamp */}
+          <p className="text-grey-400 text-xs my-2">4 minutes ago</p>
+          {/* Border */}
+          <div className="border-t -mx-3 my-3"></div>
           {/* Input */}
+          <div className="flex justify-between p-1">
+            <div className="flex">
+              <div className="Btn mr-4">
+                <Image src={emojy} />
+              </div>
+
+              <input
+                type="text"
+                placeholder="Add a comment..."
+                className="outline-0"
+              />
+            </div>
+            <button className="font-bold text-sm text-[#0095f6]">Post</button>
+          </div>
         </div>
       </div>
     </div>
