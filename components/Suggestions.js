@@ -60,10 +60,13 @@ const Suggestions = () => {
         <span className="mt-1">&#183;</span>
         <p className="mt-1">Language</p>
       </div>
-      <div className="text-xs mt-6 text-semibold text-[#d2d2d2]">
+      <div className="text-xs mt-6 text-semibold text-[#bcbcbc]">
         <p>
           © 2022 INSTAGRAM FROM{" "}
-          <a href="https://valentinomartinez-portfolio.vercel.app/">
+          <a
+            href="https://valentinomartinez-portfolio.vercel.app/"
+            className="text-[#afafaf]"
+          >
             VALENTINO MARTINEZ
           </a>
         </p>
