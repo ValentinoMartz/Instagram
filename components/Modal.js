@@ -43,7 +43,7 @@ export default function MyModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="flex flex-col justify-between items-center w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
@@ -51,13 +51,13 @@ export default function MyModal() {
                     Create New Post
                   </Dialog.Title>
 
-                  <div className="">
+                  <div className="flex items-center w-40 h-40 hover:scale-75 duration-200">
                     <Image src={media} />
                   </div>
 
                   <div className="mt-2">
                     <input
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 outline-0"
                       placeholder="Please enter a caption"
                     />
                   </div>
@@ -65,7 +65,7 @@ export default function MyModal() {
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-[#0095f6] px-4 py-2 text-sm font-medium text-white hover:bg-blue-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
                       Upload post
